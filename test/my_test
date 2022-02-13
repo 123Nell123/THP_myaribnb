@@ -1,0 +1,11 @@
+
+
+# un utilisateur a une resa
+User.new.reservations
+
+# un listing a un User
+Listing.new.user
+
+
+# Une ville peut avoir plusieurs listings.
+City.

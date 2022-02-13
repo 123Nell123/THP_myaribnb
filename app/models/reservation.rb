@@ -9,7 +9,8 @@ class Reservation < ApplicationRecord
          return start_date
        else 
         puts "erreur la date de fin est plus petite que la date de debut"
-        break 
+        
+        end
     end
 
 

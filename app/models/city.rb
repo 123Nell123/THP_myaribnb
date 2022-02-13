@@ -5,8 +5,8 @@ class City < ApplicationRecord
     
     
     validates :zip_code, 
-    presence: true
-    uniqueness: true,
+    presence: true,
+    uniqueness: true
 
 
 

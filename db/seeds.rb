@@ -36,8 +36,8 @@ has_wifi_possibilities =[true,false]
         description: "",
         has_wifi: has_wifi_possibilities.sample,
         welcome_message: "The New Airbnb will make you happy ! Enjoy:)",
-        # user_id: User.all.sample.id,
-        # city_id: City.all.sample.id
+        user_id: User.all.sample.id,
+        city_id: City.all.sample.id
         )  
     Reservation.create(
         start_date: nil,

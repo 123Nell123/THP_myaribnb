@@ -24,12 +24,20 @@ has_wifi_possibilities =[true,false]
 
 50.times do |i|
     User.create(
-        email: Faker::Internet.email
+        email: Faker::Internet.email,
+        phone_number: Faker::PhoneNumber.phone_number,
+        description: "super appart"
         )
+        
     City.create(
         name: Faker::Address.city, 
         zip_code: Faker::Address.zip_code
         )
+        
+    end  
+    puts "user et city created"
+
+50.times do |i|         
      Listing.create(
         available_beds: available_beds_array.sample,
         price: price_room,
@@ -38,11 +46,14 @@ has_wifi_possibilities =[true,false]
         welcome_message: "The New Airbnb will make you happy ! Enjoy:)",
         user_id: User.all.sample.id,
         city_id: City.all.sample.id
-        )  
+                )  
+        
     Reservation.create(
-        start_date: nil,
-        end_date: nil,
-        user_id: User.all.sample,
-        listing_id: Listing.all.sample
-        ) 
+        start_date: Date.today,
+        end_date: Date.today + i,
+        user_id: User.all.sample.id,
+        listing_id: Listing.all.sample.id
+         ) 
+         
 end
+puts "listing resa created created"
